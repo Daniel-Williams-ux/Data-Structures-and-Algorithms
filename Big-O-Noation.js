@@ -68,25 +68,3 @@ Big no is only concerned with the size, so we can drop the 4
 Hence the function above has the time complexity O(n)  run time where n is the length of the input array
 O(n) => O of n
 */
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
