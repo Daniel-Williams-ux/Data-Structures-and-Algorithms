@@ -23,3 +23,7 @@ O(n + 500 + n^3 + n^2) => O(n^3)
 Putting it all together
 To simplify fully, apply the product rule, followed by the sum rule.
 */
+
+//Full Simplification Example
+O(5n^2 + 100n + 17) = O(n^2 + n + 1) => n^2
+O((n/3)^6 + 10n) = O(n^6 + n) => O(n^6) 
