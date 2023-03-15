@@ -1,6 +1,8 @@
 """
 Problem 1
-Alice has some cards with numbers written on them. She arranges the card in descending order, and lays them out dace down in a sequence on a table. She challenges Bob to pick out the card containing a given number by turning over as few cards as posible. Write a function to helb Bob locate the card. 
+Alice has some cards with numbers written on them. She arranges the card in descending order, and lays them out dace down 
+in a sequence on a table. She challenges Bob to pick out the card containing a given number by turning over as few cards as 
+posible. Write a function to helb Bob locate the card. 
 """
 
 '''
@@ -18,9 +20,11 @@ Method
 '''
 Solution
 1.State the problem clearly. Identify the input and output formats.
-You will often encounter detailed word problems in coding challenges and interviews. The first step is to state the problem clearly and pricisely in abstract terms.
+You will often encounter detailed word problems in coding challenges and interviews. The first step is to state the problem 
+clearly and pricisely in abstract terms.
 
-In this case, we can represent the sequence of cards as a list of numbers. Turing over a specific card is equivalent to accessing the value of the number at the corresponding position in the list.
+In this case, we can represent the sequence of cards as a list of numbers. Turing over a specific card is equivalent to 
+accessing the value of the number at the corresponding position in the list.
 
                         ---Queried number
 sorted list [13, 11, 12, 7, 4, 3, 1, 0]
@@ -80,7 +84,8 @@ Step 2. Come up with some example inputs & outputs. Try to cover all edge cases.
 '''
 Obviously, the two result does not match the output as we have not yet implemented the function.
 
-We'll represent our test cases as dictionaries to make it easier to test them once we write implement our function. For example, the above test case can be represented as follows:
+We'll represent our test cases as dictionaries to make it easier to test them once we write implement our function. 
+For example, the above test case can be represented as follows:
 '''
 test = {
     'input': { 
