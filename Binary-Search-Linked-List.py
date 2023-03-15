@@ -1,6 +1,6 @@
 """
 Problem 1
-Alice has some cards with numbers written on them. She arranges the card in descending order, and lays them out dace down 
+Alice has some cards with numbers written on them. She arranges the card in descending order, and lays them out face down 
 in a sequence on a table. She challenges Bob to pick out the card containing a given number by turning over as few cards as 
 posible. Write a function to helb Bob locate the card. 
 """
