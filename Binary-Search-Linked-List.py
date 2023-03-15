@@ -97,3 +97,149 @@ test = {
 
 ''' The function can now be tested as follows. '''
 locate_card(**test['input']) == test['output']
+
+'''
+Our function should be able to handle any set of valid inputs we pass into it. 
+Here's a list of some possible variations we might encounter:
+
+1. The number `query` occurs somewhere in the middle of the list `cards`.
+2. `query` is the first element in `cards`.
+3. `query` is the last element in `cards`.
+4. The list `cards` contains just one element, which is `query`.
+5. The list `cards` does not contain number `query`.
+6. The list `cards` is empty.
+7. The list `cards` contains repeating numbers.
+8. The number `query` occurs at more than one position in `cards`.
+9. (can you think of any more variations?)
+
+> **Edge Cases**: It's likely that you didn't think of all of the above cases when you read the problem for the first time. 
+Some of these (like the empty array or `query` not occurring in `cards`) are called *edge cases*, 
+as they represent rare or extreme examples. 
+
+While edge cases may not occur frequently, your programs should be able to handle all edge cases, 
+otherwise they may fail in unexpected ways. Let's create some more test cases for the variations listed above. 
+We'll store all our test cases in an list for easier testing.
+'''
+
+tests = []
+# query occurs in the middle
+tests.append(test)
+
+tests.append({
+    'input': {
+        'cards': [13, 11, 10, 7, 4, 3, 1, 0],
+        'query': 1
+    },
+    'output': 6
+})
+
+# query is the first element
+tests.append({
+    'input': {
+        'cards': [4, 2, 1, -1],
+        'query': 4
+    },
+    'output': 0
+})
+
+# query is the last element
+tests.append({
+    'input': {
+        'cards': [3, -1, -9, -127],
+        'query': -127
+    },
+    'output': 3
+})
+
+# cards contains just one element, query
+tests.append({
+    'input': {
+        'cards': [6],
+        'query': 6
+    },
+    'output': 0 
+})
+
+'''
+The problem statement does not specify what to do if the list `cards` does not contain the number `query`. 
+
+1. Read the problem statement again, carefully.
+2. Look through the examples provided with the problem.
+3. Ask the interviewer/platform for a clarification.
+4. Make a reasonable assumption, state it and move forward.
+
+We will assume that our function will return `-1` in case `cards` does not contain `query`.
+'''
+
+# cards does not contain query 
+tests.append({
+    'input': {
+        'cards': [9, 7, 5, 2, -9],
+        'query': 4
+    },
+    'output': -1
+})
+
+# cards is empty
+tests.append({
+    'input': {
+        'cards': [],
+        'query': 7
+    },
+    'output': -1
+})
+
+# numbers can repeat in cards
+tests.append({
+    'input': {
+        'cards': [8, 8, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0],
+        'query': 3
+    },
+    'output': 7
+})
+
+
+'''
+In the case where `query` occurs multiple times in `cards`, we'll expect our function to return the first occurrence of `query`. 
+
+While it may also be acceptable for the function to return any position where `query` occurs within the list, 
+it would be slightly more difficult to test the function, as the output is non-deterministic.
+'''
+
+# query occurs multiple times
+tests.append({
+    'input': {
+        'cards': [8, 8, 6, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0],
+        'query': 6
+    },
+    'output': 2
+})
+
+#Let's look at the full set of test cases we have created so far.
+
+#tests
+[{'input': {'cards': [13, 11, 10, 7, 4, 3, 1, 0], 'query': 7}, 'output': 3},
+ {'input': {'cards': [13, 11, 10, 7, 4, 3, 1, 0], 'query': 1}, 'output': 6},
+ {'input': {'cards': [4, 2, 1, -1], 'query': 4}, 'output': 0},
+ {'input': {'cards': [3, -1, -9, -127], 'query': -127}, 'output': 3},
+ {'input': {'cards': [6], 'query': 6}, 'output': 0},
+ {'input': {'cards': [9, 7, 5, 2, -9], 'query': 4}, 'output': -1},
+ {'input': {'cards': [], 'query': 7}, 'output': -1},
+ {'input': {'cards': [8, 8, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0], 'query': 3},
+  'output': 7},
+ {'input': {'cards': [8, 8, 6, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0],
+   'query': 6},
+  'output': 2}]
+
+
+'''
+Great, now we have a fairly exhaustive set of test cases to evaluate our function. 
+
+Creating test cases beforehand allows you to identify different variations and edge cases in advance so that can make sure 
+to handle them while writing code. Sometimes, you may start out confused, but the solution will reveal itself as you try 
+to come up with interesting test cases.
+
+**Tip:** Don't stress it if you can't come up with an exhaustive list of test cases though. 
+You can come back to this section and add more test cases as you discover them. Coming up with good test cases is a 
+skill that takes practice.
+'''
