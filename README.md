@@ -1,7 +1,7 @@
 # Data-Structures-and-Algorithms
 Understanding the concepts of Data Structures and Algorithms 
 
-### Arrays and strings: Arrays and strings are the most basic data structures used in programming. They are used to store and manipulate data and are essential for solving many interview questions.
+1. Arrays and strings: Arrays and strings are the most basic data structures used in programming. They are used to store and manipulate data and are essential for solving many interview questions.
 
 2. Linked lists: Linked lists are used to store collections of items in a linear order. They can be used to represent a variety of structures, such as stacks and queues.
 
