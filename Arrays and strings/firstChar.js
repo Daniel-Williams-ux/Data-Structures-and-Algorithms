@@ -111,3 +111,19 @@ const input = 'hello';
 const middleChar = Math.floor(input.length / 2);
 const capitalizedStr = input.substring(0, middleChar) + input.charAt(middleChar).toUpperCase()+ input.substring(middleChar + 1);
 console.log(capitalizedStr)//heLlo
+
+
+
+//To capitalize the last letter of a string, you can use the slice() method to create a new string with the last character capitalized:
+const input = 'hello';
+const capitalizedStr = input.slice(0, -1)
+console.log(capitalizedStr); // Output: hell
+
+const input = 'hello';
+const capitalizedStr = input.slice(0, -1) + input.slice(-1).toUpperCase();
+console.log(capitalizedStr); // Output: hellO
+
+//To capitalize all letters in a string, you can use the toUpperCase() method:
+const input = 'hello';
+const capitalizedStr = input.toUpperCase();
+console.log(capitalizedStr); // Output: "HELLO"
